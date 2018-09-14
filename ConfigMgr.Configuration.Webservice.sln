@@ -1,18 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigMgr.Configuration.Webservice", "ConfigMgr.Configuration.Webservice.csproj", "{794B2953-9329-4E12-A6D9-1FB01A4E7F10}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{1A5C4951-FD49-4009-BAFD-3966CF7A1B6A}"
-	ProjectSection(SolutionItems) = preProject
-		..\lib\AdminUI.SiteSystems.dll = ..\lib\AdminUI.SiteSystems.dll
-		..\lib\AdminUI.StatusReporting.dll = ..\lib\AdminUI.StatusReporting.dll
-		..\lib\adminui.wqlqueryengine.dll = ..\lib\adminui.wqlqueryengine.dll
-		..\lib\microsoft.configurationmanagement.managementprovider.dll = ..\lib\microsoft.configurationmanagement.managementprovider.dll
-		..\lib\Microsoft.ConfigurationManager.ServiceManagement.dll = ..\lib\Microsoft.ConfigurationManager.ServiceManagement.dll
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +19,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A936581C-1E4D-46B7-87AD-2D2C6C550268}
 	EndGlobalSection
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True

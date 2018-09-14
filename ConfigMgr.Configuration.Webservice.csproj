@@ -63,34 +63,45 @@
     <ApplicationIcon>flaticon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AdminUI.AppManFoundation">
-      <HintPath>..\lib\AdminUI.AppManFoundation.dll</HintPath>
-    </Reference>
-    <Reference Include="AdminUI.DcmObjectWrapper">
-      <HintPath>..\lib\AdminUI.DcmObjectWrapper.dll</HintPath>
-    </Reference>
-    <Reference Include="AdminUI.SiteSystems">
-      <HintPath>..\lib\AdminUI.SiteSystems.dll</HintPath>
-    </Reference>
-    <Reference Include="AdminUI.StatusReporting">
-      <HintPath>..\lib\AdminUI.StatusReporting.dll</HintPath>
-    </Reference>
-    <Reference Include="adminui.wqlqueryengine, Version=4.0.6000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="AdminUI.AppManFoundation, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\adminui.wqlqueryengine.dll</HintPath>
+      <HintPath>lib\AdminUI.AppManFoundation.dll</HintPath>
     </Reference>
-    <Reference Include="microsoft.configurationmanagement.applicationmanagement">
-      <HintPath>..\lib\microsoft.configurationmanagement.applicationmanagement.dll</HintPath>
-    </Reference>
-    <Reference Include="microsoft.configurationmanagement.managementprovider, Version=4.0.6000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="AdminUI.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\microsoft.configurationmanagement.managementprovider.dll</HintPath>
+      <HintPath>lib\AdminUI.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ConfigurationManager.CommonBase">
-      <HintPath>..\lib\Microsoft.ConfigurationManager.CommonBase.dll</HintPath>
+    <Reference Include="AdminUI.DcmObjectWrapper, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\AdminUI.DcmObjectWrapper.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ConfigurationManager.ServiceManagement">
-      <HintPath>..\lib\Microsoft.ConfigurationManager.ServiceManagement.dll</HintPath>
+    <Reference Include="AdminUI.SiteSystems, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\AdminUI.SiteSystems.dll</HintPath>
+    </Reference>
+    <Reference Include="AdminUI.StatusReporting, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\AdminUI.StatusReporting.dll</HintPath>
+    </Reference>
+    <Reference Include="adminui.wqlqueryengine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\adminui.wqlqueryengine.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.configurationmanagement.applicationmanagement, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\microsoft.configurationmanagement.applicationmanagement.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.configurationmanagement.managementprovider, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\microsoft.configurationmanagement.managementprovider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ConfigurationManager.CommonBase, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Microsoft.ConfigurationManager.CommonBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ConfigurationManager.ServiceManagement, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Microsoft.ConfigurationManager.ServiceManagement.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -118,6 +129,36 @@
     <Content Include="ConfigMgr.asmx">
       <BrowseToURL>~/ConfigMgr.Configuration.Webservice/bin/ConfigMgr.asmx</BrowseToURL>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\AdminUI.AppManFoundation.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\AdminUI.Common.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\AdminUI.DcmObjectWrapper.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\AdminUI.SiteSystems.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\AdminUI.StatusReporting.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\adminui.wqlqueryengine.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\microsoft.configurationmanagement.applicationmanagement.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\microsoft.configurationmanagement.managementprovider.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\Microsoft.ConfigurationManager.CommonBase.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\Microsoft.ConfigurationManager.ServiceManagement.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Web.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
