@@ -125,6 +125,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="capture.png" />
     <Content Include="flaticon.ico" />
     <Content Include="ConfigMgr.asmx">
       <BrowseToURL>~/ConfigMgr.Configuration.Webservice/bin/ConfigMgr.asmx</BrowseToURL>
