@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigMgr.Configuration.Webservice", "ConfigMgr.Configuration.Webservice.csproj", "{794B2953-9329-4E12-A6D9-1FB01A4E7F10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{1A5C4951-FD49-4009-BAFD-3966CF7A1B6A}"
+	ProjectSection(SolutionItems) = preProject
+		..\lib\AdminUI.SiteSystems.dll = ..\lib\AdminUI.SiteSystems.dll
+		..\lib\AdminUI.StatusReporting.dll = ..\lib\AdminUI.StatusReporting.dll
+		..\lib\adminui.wqlqueryengine.dll = ..\lib\adminui.wqlqueryengine.dll
+		..\lib\microsoft.configurationmanagement.managementprovider.dll = ..\lib\microsoft.configurationmanagement.managementprovider.dll
+		..\lib\Microsoft.ConfigurationManager.ServiceManagement.dll = ..\lib\Microsoft.ConfigurationManager.ServiceManagement.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{794B2953-9329-4E12-A6D9-1FB01A4E7F10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{794B2953-9329-4E12-A6D9-1FB01A4E7F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{794B2953-9329-4E12-A6D9-1FB01A4E7F10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{794B2953-9329-4E12-A6D9-1FB01A4E7F10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{794B2953-9329-4E12-A6D9-1FB01A4E7F10}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal
