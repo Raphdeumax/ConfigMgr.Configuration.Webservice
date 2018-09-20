@@ -3,9 +3,6 @@
 //*******************************************************************************//
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine;
 using System.Configuration;
 using Microsoft.Win32;
@@ -96,12 +93,12 @@ namespace ConfigMgr.Configuration.Webservice.utils
             try
             {
                 _log.Write(_className, methodName, _serverCode, "Starting the function " + methodName);
-                _log.Write(_className, methodName, _serverCode, "Connexion WQL au Central : " + _serverName + " | Site code : " + _serverCode);
+                _log.Write(_className, methodName, _serverCode, "WQL connection in progress : " + _serverName + " | Site code : " + _serverCode);
                 connection = new WqlConnectionManager(namedValues);
                 if (!string.IsNullOrEmpty(_sccmUserDomain) & !string.IsNullOrEmpty(_sccmUser) & !string.IsNullOrEmpty(_sccmUserPassword))
                 {                    
                     userName = _sccmUserDomain + "\\" + _sccmUser;
-                    _log.Write(_className, methodName, _serverCode, "Utilisateur associe : " + userName);
+                    _log.Write(_className, methodName, _serverCode, "Associated user : " + userName);
                     connection.Connect(_serverName, userName, _sccmUserPassword);
                 }
                 else
@@ -109,13 +106,13 @@ namespace ConfigMgr.Configuration.Webservice.utils
                     connection.Connect(_serverName);
                 }
 
-                _log.Write(_className, methodName, _serverCode, "Connexion WQL au Central " + _serverName + " OK");
+                _log.Write(_className, methodName, _serverCode, "WQL connection on " + _serverName + " OK");
 
                 return connection;
             }
             catch (SmsException ex)
             {
-                _log.Write(_className, methodName, "Exception", "WARNING : Echec de Connexion");
+                _log.Write(_className, methodName, "Exception", "WARNING : General connection failed");
                 _log.Write(_className, methodName, "Exception", ex.Message.ToString());
                 connection.Close();
                 connection.Dispose();
@@ -123,7 +120,7 @@ namespace ConfigMgr.Configuration.Webservice.utils
             }
             catch (UnauthorizedAccessException ex)
             {
-                _log.Write(_className, methodName, "Exception", "WARNING : Echec d'authentification");
+                _log.Write(_className, methodName, "Exception", "WARNING : Authentication failed");
                 _log.Write(_className, methodName, "Exception", ex.Message.ToString());
                 connection.Close();
                 connection.Dispose();
@@ -131,7 +128,7 @@ namespace ConfigMgr.Configuration.Webservice.utils
             }
             catch (Exception ex)
             {
-                _log.Write(_className, methodName, "Exception", "WARNING : La connexion DCOM est impossible");
+                _log.Write(_className, methodName, "Exception", "WARNING : DCOM Connection failed");
                 _log.Write(_className, methodName, "Exception", ex.Message.ToString());
                 connection.Close();
                 connection.Dispose();
@@ -155,16 +152,16 @@ namespace ConfigMgr.Configuration.Webservice.utils
             try
             {
                 _log.Write(_className, methodName, _serverCode, "Starting the function " + methodName);
-                _log.Write(_className, methodName, _serverCode, "fermeture de la Connexion WQL au Central " + _serverName);
+                _log.Write(_className, methodName, _serverCode, "Closing WQL connection " + _serverName);
                 wqlConnection.Close();
                 wqlConnection.Dispose();
-                _log.Write(_className, methodName, _serverCode, "Fermeture Connexion WMI au Central " + _serverName + " OK");
+                _log.Write(_className, methodName, _serverCode, "WQL Connection Opening " + _serverName + " OK");
                 return true;
 
             }
             catch (Exception ex)
             {
-                _log.Write(_className, methodName, "Exception", "WARNING : Fermeture Connexion WQL au Central");
+                _log.Write(_className, methodName, "Exception", "WARNING : Error closing WQL connection");
                 _log.Write(_className, methodName, "Exception", ex.Message.ToString());
                 throw new Exception("WARNING : " + ex.Message.ToString());
             }

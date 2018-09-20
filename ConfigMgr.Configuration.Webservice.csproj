@@ -12,7 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ConfigMgr.Configuration.Webservice</RootNamespace>
     <AssemblyName>ConfigMgr.Configuration.Webservice</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>4.0</OldToolsVersion>
@@ -131,36 +131,16 @@
       <BrowseToURL>~/ConfigMgr.Configuration.Webservice/bin/ConfigMgr.asmx</BrowseToURL>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="lib\AdminUI.AppManFoundation.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="lib\AdminUI.Common.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="lib\AdminUI.DcmObjectWrapper.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="lib\AdminUI.SiteSystems.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="lib\AdminUI.StatusReporting.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="lib\adminui.wqlqueryengine.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="lib\microsoft.configurationmanagement.applicationmanagement.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="lib\microsoft.configurationmanagement.managementprovider.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="lib\Microsoft.ConfigurationManager.CommonBase.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="lib\Microsoft.ConfigurationManager.ServiceManagement.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="lib\AdminUI.AppManFoundation.dll" />
+    <Content Include="lib\AdminUI.Common.dll" />
+    <Content Include="lib\AdminUI.DcmObjectWrapper.dll" />
+    <Content Include="lib\AdminUI.SiteSystems.dll" />
+    <Content Include="lib\AdminUI.StatusReporting.dll" />
+    <Content Include="lib\adminui.wqlqueryengine.dll" />
+    <Content Include="lib\microsoft.configurationmanagement.applicationmanagement.dll" />
+    <Content Include="lib\microsoft.configurationmanagement.managementprovider.dll" />
+    <Content Include="lib\Microsoft.ConfigurationManager.CommonBase.dll" />
+    <Content Include="lib\Microsoft.ConfigurationManager.ServiceManagement.dll" />
     <Content Include="Web.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
@@ -202,12 +182,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\CM01.pubxml" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -267,9 +249,11 @@
           <DevelopmentServerPort>64684</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost/ConfigMgr.Configuration.Webservice</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost/ConfigMgr.Configuration.Webservice</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>True</UseCustomServer>
-          <CustomServerUrl>http://cm01/ConfigMgr.Configuration.Webservice</CustomServerUrl>
+          <CustomServerUrl>http://localhost/ConfigMgr.Configuration.Webservice</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>

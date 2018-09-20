@@ -2323,7 +2323,7 @@ namespace ConfigMgr.Configuration.Webservice
          /// <param name="userName"></param>
          /// <returns></returns>
         [WebMethod(Description = "Add a computer association between a computer and older computer for a single user")]
-        public string AddComputerAssociationForMigration(string ComputerName, string OldComputerName, string userName)
+        public string AddComputerAssociationForMigration(string ComputerName, string OldComputerName, string userName,MigrationBehavior MigrationType)
         {
             string returnCode = "1";
             Connection Myconnection = new Connection();
@@ -2336,7 +2336,7 @@ namespace ConfigMgr.Configuration.Webservice
             {
 
                 _log.Write(_className, methodName, ComputerName, "Starting the call " + methodName);
-                returnCode = _sa.AddComputerAssociationForUser(ComputerName, OldComputerName, userName, ConnectionManager);   
+                returnCode = _sa.AddComputerAssociationForUser(ComputerName, OldComputerName, userName, MigrationType, ConnectionManager);   
                 return returnCode;
             }
             catch (Exception ex)

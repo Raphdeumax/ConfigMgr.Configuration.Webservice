@@ -3279,7 +3279,7 @@ namespace ConfigMgr.Configuration.Webservice.utils
         /// <param name="userName"></param>
         /// <param name="connection"></param>
         /// <returns></returns>
-        public string AddComputerAssociationForUser(string ComputerName, string OldComputerName, string userName, WqlConnectionManager connection)
+        public string AddComputerAssociationForUser(string ComputerName, string PreviousComputerName, string userName, MigrationBehavior MigrationType, WqlConnectionManager connection)
         {
             System.Diagnostics.StackFrame sf;
             sf = new System.Diagnostics.StackFrame();
@@ -3291,40 +3291,44 @@ namespace ConfigMgr.Configuration.Webservice.utils
 
                 List<IResultObject> Users = new List<IResultObject>();
                 List<SMS_R_System> sourceComputer = GetClientByName(connection, ComputerName);
-                List<SMS_R_System> OldComputer = GetClientByName(connection, OldComputerName);
+                List<SMS_R_System> previousComputer = GetClientByName(connection, PreviousComputerName);
+
 
                 if (sourceComputer.Count() > 1)
                 {
                     throw new Exception("Several source computers exist with this name");
                 }
 
-                if (OldComputer.Count() > 1)
+                if (previousComputer.Count() > 1)
                 {
                     throw new Exception("Several older computers exist with this name");
                 }
 
-                if (sourceComputer.Count() > 0 && OldComputer.Count() > 0)
-                {
+                if (sourceComputer.Count() > 0 && previousComputer.Count() > 0
+                    && sourceComputer[0].SMBIOSGUID != "" && previousComputer[0].SMBIOSGUID != "")
+                {                    
+                     
+                    Dictionary<string, object> MigrationParams = new Dictionary<string, object>();
+                    MigrationParams.Add("SourceClientResourceID", (UInt32)sourceComputer[0].ResourceID);
+                    MigrationParams.Add("RestoreClientResourceID", (UInt32)previousComputer[0].ResourceID);
+                    MigrationParams.Add("MigrationBehavior", (UInt32)MigrationType);
 
-                    //' Construct in params for execution
-                    UInt32 migBehavior = 2;
-                    Dictionary<string, object> execParams = new Dictionary<string, object>();
-                    execParams.Add("SourceClientResourceID", sourceComputer[0].ResourceID);
-                    execParams.Add("RestoreClientResourceID", OldComputer[0].ResourceID);
-                    execParams.Add("MigrationBehavior", migBehavior);
+                    if (MigrationType == MigrationBehavior.CAPTUREANDRESTORESPECIFIED)
+                    {
+                        IResultObject UserInstance = connection.CreateEmbeddedObjectInstance("SMS_StateMigrationUserNames");
+                        UserInstance["UserName"].StringValue = userName;
+                        UserInstance["LocaleID"].IntegerValue = 0;
+                        Users.Add(UserInstance);
+                        MigrationParams.Add("UserNames", Users);
 
-                    IResultObject userInstance = connection.CreateEmbeddedObjectInstance("SMS_StateMigrationUserNames");
-                    userInstance["UserName"].StringValue = userName;
-                    userInstance["LocaleID"].IntegerValue = 0;
-                    Users.Add(userInstance);
-                    execParams.Add("UserNames", Users);
-
-
-                    IResultObject execute = connection.ExecuteMethod("SMS_StateMigration", "AddAssociationEx", execParams);
+                    }
+                                       
+                    IResultObject execute = connection.ExecuteMethod("SMS_StateMigration", "AddAssociationEx", MigrationParams);
                     if (execute["ReturnValue"].IntegerValue == 0)
                     {
                         returnValue = "0";
                     }
+
                 }
                 else {
                     throw new Exception("Newer or older computer does not exist.");

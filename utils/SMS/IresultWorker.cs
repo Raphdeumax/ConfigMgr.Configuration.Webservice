@@ -916,4 +916,11 @@ namespace ConfigMgr.Configuration.Webservice.utils.SMS
 
 
     }
+
+    public enum MigrationBehavior
+    {
+        CAPTUREANDRESTOREALL,
+        CAPTUREALLRESTORESPECIFIED,
+        CAPTUREANDRESTORESPECIFIED
+    }
 }
