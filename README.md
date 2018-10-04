@@ -3,13 +3,13 @@ The ConfigMgr Configuration WebService has been designed to Provides access to t
 
 # Configuration Manager (methods available) :
 
-AddClientToCollection :
+- AddClientToCollection :
 Add a Client in a collection 
 
-AddComputerAssociationForMigration :
+- AddComputerAssociationForMigration :
 Add a computer association between a computer and older computer for a single user 
 
-AddDPGroups :
+- AddDPGroups :
 Add a distribution point to a Distribution Group 
 
 AddPackageOnDistributionPoint :
