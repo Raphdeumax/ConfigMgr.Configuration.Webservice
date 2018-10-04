@@ -5,161 +5,109 @@ The ConfigMgr Configuration WebService has been designed to Provides access to t
 
 - AddClientToCollection :
 Add a Client in a collection 
-
 - AddComputerAssociationForMigration :
 Add a computer association between a computer and older computer for a single user 
-
 - AddDPGroups :
 Add a distribution point to a Distribution Group 
-
-AddPackageOnDistributionPoint :
+- AddPackageOnDistributionPoint :
 Add a package on a Distribution Point 
-
-AddSecondaryToCollection :
+- AddSecondaryToCollection :
 Add a distribution Group to a Collection 
-
-AddSenderAddress :
+- AddSenderAddress :
 Add a sender Address in order to communicate with a new site recently created 
-
-AddSiteBoundaries :
+- AddSiteBoundaries :
 Add Site Boundary 
-
-AddUnknownClientToCollection :
+- AddUnknownClientToCollection :
 Add an unknown Client from a collection 
-
-AssignApplicationToCollection :
+- AssignApplicationToCollection :
 Deploy an application on a collection of devices or Users 
-
-CopyPackageOnDP :
+- CopyPackageOnDP :
 Copy all packages on the Dp from a Reference Distribution Point 
-
-CreateApplication :
+- CreateApplication :
 Add an unknown Client from a collection 
-
-GetADSiteFromGateway :
+- GetADSiteFromGateway :
 Get ADSite by Gateway 
-
-GetADSiteFromIP :
+- GetADSiteFromIP :
 Get ADSite by IP Address 
-
-GetAllBoundaries :
+- GetAllBoundaries :
 Get all boundaries available in SCCM 
-
-GetAllClient :
+- GetAllClient :
 Retrieve all clients informations available in SCCM 
-
-GetAllDPGroups :
+- GetAllDPGroups :
 Get all DP Groups available in SCCM 
-
-GetAllUserAdmin :
+- GetAllUserAdmin :
 Retrieve all clients informations available in SCCM 
-
-GetApplicationsListInfos :
+- GetApplicationsListInfos :
 Get all applications assign to a Site 
-
-GetClientByName :
+- GetClientByName :
 Retrieve Clients associate to the UserName (Without domain) 
-
-GetClientBySubnet :
+- GetClientBySubnet :
 Retrieve Clients associate to a subnet (format = > 192.168.1.0) 
-
-GetClientByUUID :
+- GetClientByUUID :
 Retrieve client informations available in SCCM by BIOS UUID identifier 
-
-GetClientByUserName :
+- GetClientByUserName :
 Retrieve Clients associate to the UserName (Without domain) 
-
-GetClientDetailsLDAP :
+- GetClientDetailsLDAP :
 Get Computer informations from the active directory 
-
-GetClientExist :
+- GetClientExist :
 Client Exist ? 1=Yes | 0=No 
-
-GetClientOSByResourceID :
+- GetClientOSByResourceID :
 Retrieve client Operating System informations available in SCCM by ResourceID 
-
-GetCollectionID :
+- GetCollectionID :
 Get all Collection ID associate to a client 
-
-GetCriticalSiteComponent :
+- GetCriticalSiteComponent :
 Get All Critical status for a component, example : SMS_MP 
-
-GetDirectCollectionID :
+- GetDirectCollectionID :
 Get all direct collection assignement to a Client 
-
-GetLocationSite :
+- GetLocationSite :
 Get client Location by IP Address 
-
-GetPackagesListInfos :
+- GetPackagesListInfos :
 Get all Packages | Boot Images | Windows Updates assign to a Site 
-
-GetParentSiteInfos :
+- GetParentSiteInfos :
 Get a parent of a SCCM server 
-
-GetServerExist :
+- GetServerExist :
 SCCM Server Exist => 1=Yes | 0=No 
-
-GetServerInfos :
+- GetServerInfos :
 Get the SCCM Server informations 
-
-GetSiteCodeInfos :
+- GetSiteCodeInfos :
 Get the Site code of a SCCM Server 
-
-GetTaskSequencesListInfos :
+- GetTaskSequencesListInfos :
 Get all task sequences assign to a Site 
-
-GetUnknowClientByUUID :
+- GetUnknowClientByUUID :
 Check for 'Unknown' Client record by UUID (SMBIOS GUID) 
-
-IsInAllSystemsCollection :
+- IsInAllSystemsCollection :
 Check if client exist in the collection AllSystems 
-
-IsPackageExist :
+- IsPackageExist :
 Check if a package exist in SCCM 
-
-RefreshAllPackages :
+- RefreshAllPackages :
 Refresh all packages assign to a distribution point 
-
-RefreshPackage :
+- RefreshPackage :
 Refresh a package assign to a distribution point 
-
-RemoveClientByName :
+- RemoveClientByName :
 Remove client in SCCM by Name 
-
-RemoveClientByUUID :
+- RemoveClientByUUID :
 Remove client in SCCM by BIOS UUID identifier 
-
-RemoveClientFromCollection :
+- RemoveClientFromCollection :
 Remove a Client from a collection 
-
-RemoveClientLDAP :
+- RemoveClientLDAP :
 Remove a computer from the active directory 
-
-RemoveDPGroups :
+- RemoveDPGroups :
 Remove a distribution point from a Distribution Group 
-
-RemovePackageFromDistributionPoint :
+- RemovePackageFromDistributionPoint :
 Remove a Package from a distribution point 
-
-RemoveSenderAddress :
+- RemoveSenderAddress :
 Remove a Sender Address 
-
-RemoveServerFromSCCM :
-Remove a server from SCCL 
-
-RemoveSiteBoundaries :
+- RemoveServerFromSCCM :
+Remove a server from SCCM 
+- RemoveSiteBoundaries :
 Remove all site boundaries associte to a Server site 
-
-RemoveUnknowClientByUUID :
+- RemoveUnknowClientByUUID :
 Check for 'Unknown' Client record by UUID (SMBIOS GUID) 
-
-RemoveUnknownClientFromCollection :
+- RemoveUnknownClientFromCollection :
 Remove an unknown Client from a collection 
-
-SyncKeySecondary :
+- SyncKeySecondary :
 Send the Secondary Key to The Primary server and conversely in order to synchronize both sites 
-
-UpdateSiteBoundaries :
+- UpdateSiteBoundaries :
 Update site boundaries
 
 # Supported Configurations
