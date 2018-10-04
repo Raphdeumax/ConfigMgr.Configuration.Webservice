@@ -110,6 +110,21 @@ Send the Secondary Key to The Primary server and conversely in order to synchron
 - UpdateSiteBoundaries :
 Update site boundaries
 
+# Example of use :
+````
+$url = "http://localhost/ConfigMgr.Configuration.Webservice"
+$WebConfMgr = New-WebServiceProxy $url -UseDefaultCredential $true
+$Return = $WebConfMgr.AddClientToCollection("ComputerName","CollectionID")
+
+if($Return -eq $true) { 
+    Write-Output "Computer client added to the collection"
+} else {
+    Write-Output "Error when calling the Web service"
+}
+````
+
+
+
 # Supported Configurations
 This web service has been built to support the following versions of System Center Configuration Manager:
 
